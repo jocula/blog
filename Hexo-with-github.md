@@ -36,8 +36,7 @@ tags:
   |3.0 - 3.1|0.10 或 iojs|unknown|
   |0.0.1 - 2.8|0.10|unknown|
 
-  本人是在Windows VMware内使用Ubuntu 16.04系统，尝试了Node-v10.15.0、Node-v14.15.0后均出现Hexo的兼容性问题，尝试Node-v22.15.0则出现对Python依赖的错误。请教网络上
-  神通广大的网友，并咨询deepseek这位归纳总结小能手，最终确定使用Node-v12.22.12。
+  本人是在Windows VMware内使用Ubuntu 16.04系统，尝试了Node-v10.15.0、Node-v14.15.0后均出现Hexo的兼容性问题，尝试Node-v22.15.0则出现对Python依赖的错误。请教网络上神通广大的网友，并咨询deepseek这位归纳总结小能手，最终确定使用Node-v12.22.12。
 
   Linux下建议使用源码安装Node，源码包下载链接：<https://nodejs.org/dist/v12.22.12/node-v12.22.12.tar.gz>。编译命令如下：
     ./configure --prefix=/usr/local && make && sudo make install
@@ -63,12 +62,17 @@ tags:
   参考<https://cloud.tencent.com/developer/article/1781066>，主要步骤如下：
 
   1. 查看当前http/https代理：
+
     npm config get proxy
     npm config get https-proxy
+  
   2. 删除现有http/https代理：
+
     npm config delete proxy
     npm config delete https-proxy
+
   3. 配置http/https代理：
+
     npm config set proxy <代理配置>
     npm config set https-proxy <代理配置>
 
@@ -77,8 +81,11 @@ tags:
   参考<https://blog.csdn.net/chenbb8/article/details/127798751>，主要步骤如下：
 
   1. 删除现有代理：
+
     git config --global --unset http.https://github.com.proxy
+
   2. 配置http/https代理：
+
     git config --global http.https://github.com.proxy <代理配置>
 
   具体配置内容可以通过命令查看：cat ~/.gitconfig
@@ -224,7 +231,9 @@ npm ERR!     <你的家目录>/.npm/_logs/2025-03-03T04_40_21_252Z-debug.log
   本地测试博客没有问题后，就可以发布到远程了。具体步骤如下：
 
   1. 在你的博客目录执行如下命令：
+
     npm install hexo-deployer-git --save
+
   2. 设置本地Git仓库配置
     在GitHub中创建仓库的过程不再赘述，上述的参考链接说的很详细。需要注意的是仓库名称必须为“<你的GitHub用户名>.github.io”。
     打开你的博客目录下的_config.yml文件，在末尾的Deployment部分写入你的Git仓库信息如下：
@@ -235,8 +244,10 @@ npm ERR!     <你的家目录>/.npm/_logs/2025-03-03T04_40_21_252Z-debug.log
         branch: main
 
   3. 设置本地Git账号配置
+
     git config --global user.email "<你的邮箱>"
     git config --global user.name "<你的GitHub用户名>"
+
   4. 上传网站
     hexo deploy
 

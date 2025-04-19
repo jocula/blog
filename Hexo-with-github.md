@@ -21,7 +21,7 @@ tags:
 
 ## 开发环境说明
 
-  Hexo基于Node.js运行，其版本和Node.js的版本有强依赖关系。参考：https://hexo.nodejs.cn/docs/index.html，版本对应关系如下：
+  Hexo基于Node.js运行，其版本和Node.js的版本有强依赖关系。参考：<https://hexo.nodejs.cn/docs/index.html>，版本对应关系如下：
 
   |Hexo 版本|最小（Node.js 版本）|小于（Node.js 版本）|
   |-------------|----------------------|-------------------|
@@ -39,7 +39,7 @@ tags:
   本人是在Windows VMware内使用Ubuntu 16.04系统，尝试了Node-v10.15.0、Node-v14.15.0后均出现Hexo的兼容性问题，尝试Node-v22.15.0则出现对Python依赖的错误。请教网络上
   神通广大的网友，并咨询deepseek这位归纳总结小能手，最终确定使用Node-v12.22.12。
 
-  Linux下建议使用源码安装Node，源码包下载链接：https://nodejs.org/dist/v12.22.12/node-v12.22.12.tar.gz。编译命令如下：
+  Linux下建议使用源码安装Node，源码包下载链接：<https://nodejs.org/dist/v12.22.12/node-v12.22.12.tar.gz>。编译命令如下：
     ./configure --prefix=/usr/local && make && sudo make install
   如果系统中有其他版本的Node，请先删除。
 
@@ -49,7 +49,7 @@ tags:
 
 ### 虚拟机使用主机代理的设置
 
-  参考https://blog.csdn.net/weixin_63594197/article/details/138069939，主要步骤如下：
+  参考<https://blog.csdn.net/weixin_63594197/article/details/138069939>，主要步骤如下：
 
   1. 虚拟机网卡使用NAT模式上网，找到主机侧虚拟网卡的IP地址;
   2. 打开v2ray，在配置中找到sock5代理端口，默认是10808；
@@ -60,7 +60,7 @@ tags:
 
 ### 配置npm代理
 
-  参考https://cloud.tencent.com/developer/article/1781066，主要步骤如下：
+  参考<https://cloud.tencent.com/developer/article/1781066>，主要步骤如下：
 
   1. 查看当前http/https代理：
     npm config get proxy
@@ -74,7 +74,7 @@ tags:
 
 ### 配置github代理
 
-  参考https://blog.csdn.net/chenbb8/article/details/127798751，主要步骤如下：
+  参考<https://blog.csdn.net/chenbb8/article/details/127798751>，主要步骤如下：
 
   1. 删除现有代理：
     git config --global --unset http.https://github.com.proxy
@@ -86,7 +86,7 @@ tags:
 ## 安装部署Hexo博客
 
   终于到了本文的主题。这一步遇到了太多的坑，真的想说Node.js的依赖处理很差劲！
-  如下内容参考链接：https://zhuanlan.zhihu.com/p/60578464。
+  如下内容参考链接：<https://zhuanlan.zhihu.com/p/60578464>。
 
 ## 安装Hexo
 
